@@ -1,6 +1,7 @@
 import React from 'react';
 import Immutable from 'react-immutable-proptypes';
 import { Map } from 'immutable';
+import style from './Home.css';
 
 export default class Home extends React.Component {
   static propTypes = {
@@ -41,23 +42,25 @@ export default class Home extends React.Component {
     failed = failed.get(this.state.query, false);
 
     return (
-      <div>
+      <div className={style.wrapper}>
+        <h1>Gambit Example App</h1>
+        <p>Enter a username to search github</p>
         <input
           type="text"
           onChange={this.onChange}
         />
         {!loading && (
-          <div>
+          <div className={style.results}>
             {results.map(user => (
-              <p>{user.get('id')} {user.get('login')}</p>
+              <p className={style.result}>{user.get('id')} {user.get('login')}</p>
             ))}
           </div>
         )}
         {loading && (
-          <p>Loading</p>
+          <p className={style.info}>Loading</p>
         )}
         {failed && (
-          <p>Failed to fetch, probably over API limit... wait a few </p>
+          <p className={style.info}>Failed to fetch, probably over API limit... wait a few </p>
         )}
       </div>
     );

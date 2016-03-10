@@ -1,0 +1,32 @@
+.wrapper {
+  width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 30px auto;
+  padding: 30px;
+}
+.wrapper h1 {
+  margin-top: 0px;
+}
+.wrapper input {
+  width: 100%;
+  padding: 10px 0px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: none;
+}
+.wrapper input:focus {
+  outline: none;
+}
+.wrapper .results {
+  margin-top: 15px;
+}
+.wrapper .results .result {
+  padding: 14px;
+  background: rgba(249, 249, 249, 1);
+  margin: 0px;
+}
+.wrapper .results .result:nth-child(2n) {
+  background: rgba(255, 255, 255, 1);
+}
