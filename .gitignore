@@ -1,0 +1,7 @@
+/node_modules
+/dist
+
+# OS generated files
+.DS_Store
+*.swp
+npm-debug.log

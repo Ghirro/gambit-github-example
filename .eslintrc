@@ -1,0 +1,4 @@
+extends: "eslint-config-lens"
+parser: "babel-eslint"
+rules:
+  max-len: 0
